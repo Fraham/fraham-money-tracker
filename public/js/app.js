@@ -1,1 +1,1 @@
-angular.module('moneyTrackerApp', ['ngRoute', 'appRoutes', 'MainCtrl'])
+angular.module('moneyTrackerApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'CashFlowService'])

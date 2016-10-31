@@ -6,6 +6,7 @@ exports.create = function (req, res) {
     cashFlow.description =  req.body.description ? req.body.description : "";
     cashFlow.category =  req.body.category ? req.body.category : "";
     cashFlow.amount =  req.body.amount ? req.body.amount : 0;
+    cashFlow.purchaseDate = req.body.purchaseDate ? req.body.purchaseDate : Date.now();
 
     cashFlow.save(function (err) {
         if (err) {

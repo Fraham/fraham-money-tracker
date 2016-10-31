@@ -1,1 +1,9 @@
-<h2>Main.html</h2>
+<div class="row">
+		<div class="col-md-12">
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="flow in cashFlows">
+					{{flow.description}} {{flow.category}} £{{flow.amount}} {{flow.purchaseDate}}
+				</li>
+			</ul>
+		</div>
+</div>
