@@ -27,8 +27,10 @@ var port = process.env.PORT || 8080;        // set our port
 
 module.exports = app;
 
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, '../public', 'index.html'));
+    res.sendfile('./public/index.html');
 });
 
 // START THE SERVER
