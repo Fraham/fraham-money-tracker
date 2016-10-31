@@ -1,0 +1,1 @@
+angular.module('moneyTrackerApp', ['ngRoute', 'appRoutes', 'MainCtrl'])

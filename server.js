@@ -10,6 +10,7 @@ var app = express();                 // define our app using express
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var db = mongoose.connection;
+var path = require('path');
 mongoose.Promise = global.Promise;
 db.on('error', console.error.bind(console, 'connection error:'));
 var databaseUrl = process.env.databaseUrl
@@ -27,7 +28,7 @@ var port = process.env.PORT || 8080;        // set our port
 module.exports = app;
 
 app.get('/', function(req, res) {
-    res.sendfile('./public/index.html');
+    res.sendFile(path.join(__dirname, '../public', 'index.html'));
 });
 
 // START THE SERVER
