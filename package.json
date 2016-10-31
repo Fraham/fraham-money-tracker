@@ -1,0 +1,27 @@
+{
+  "name": "fraham-money-tracker",
+  "version": "1.0.0",
+  "description": "Money Tracker",
+  "main": "server.js",
+  "scripts": {
+    "start": "bower install; node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MMP-HCKMCR/loaa-web.git"
+  },
+  "author": "MPP Hack Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MMP-HCKMCR/loaa-web/issues"
+  },
+  "homepage": "https://github.com/MMP-HCKMCR/loaa-web#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bower": "^1.7.9",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.5",
+    "request" : "^2.76.0"
+  }
+}
