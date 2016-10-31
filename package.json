@@ -4,7 +4,7 @@
   "description": "Money Tracker",
   "main": "server.js",
   "scripts": {
-    "start": "bower install; node server.js",
+    "start": "npm install; bower install; node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
