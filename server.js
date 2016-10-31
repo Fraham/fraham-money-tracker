@@ -1,4 +1,4 @@
-// server.js
+require('dotenv').config()
 
 // BASE SETUP
 // =============================================================================
@@ -25,9 +25,6 @@ app.use(bodyParser.json());
 var port = process.env.PORT || 8080;        // set our port
 
 module.exports = app;
-
-// set the static files location /public/img will be /img for users
-app.use(express.static(__dirname + '/public'));
 
 // START THE SERVER
 // =============================================================================
