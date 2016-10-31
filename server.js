@@ -26,6 +26,10 @@ var port = process.env.PORT || 8080;        // set our port
 
 module.exports = app;
 
+app.get('/', function(req, res) {
+    res.sendfile('./public/index.html');
+});
+
 // START THE SERVER
 // =============================================================================
 app.listen(port);
