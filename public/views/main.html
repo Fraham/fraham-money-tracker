@@ -1,9 +1,22 @@
 <div class="row">
-		<div class="col-md-12">
-			<ul class="list-group">
-				<li class="list-group-item" ng-repeat="flow in cashFlows">
-					{{flow.description}} {{flow.category}} £{{flow.amount}} {{flow.purchaseDate}}
-				</li>
-			</ul>
-		</div>
+	<div class="col-md-12">
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Description</th>
+					<th>Category</th>
+					<th>Amount</th>
+					<th>Purchase Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="flow in cashFlows">
+					<td>{{flow.description}}</td>
+					<td>{{flow.category}}</td>
+					<td ng-class="{greenText:flow.amount > 0, redText:flow.amount<=0}">£{{flow.amount}}</td>
+					<td>{{flow.purchaseDate}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 </div>

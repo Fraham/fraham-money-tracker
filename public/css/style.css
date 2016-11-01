@@ -1,0 +1,11 @@
+.greenText{
+    color: green;
+}
+
+.redText{
+    color: red;
+}
+
+tr:hover{
+    background-color: lightslategray;
+}
