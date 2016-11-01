@@ -1,4 +1,4 @@
-require('dotenv').config()
+//require('dotenv').config()
 
 var express = require('express');       
 var app = express();                
@@ -12,9 +12,9 @@ var db = mongoose.connection;
 var path = require('path');
 mongoose.Promise = global.Promise;
 db.on('error', console.error.bind(console, 'connection error:'));
-var databaseUrl = process.env.databaseUrl
-var databaseUser = process.env.databaseUser
-var databasePassword = process.env.databasePassword
+var databaseUrl = process.env.DATABASEURL
+var databaseUser = process.env.DATABASEUSER
+var databasePassword = process.env.DATABASEPASSWORD
 mongoose.connect('mongodb://'+databaseUser+':'+databasePassword+'@'+databaseUrl);
 
 app.use(bodyParser.urlencoded({ extended: true }));
