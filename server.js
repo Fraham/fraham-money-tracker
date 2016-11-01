@@ -12,9 +12,9 @@ var db = mongoose.connection;
 var path = require('path');
 mongoose.Promise = global.Promise;
 db.on('error', console.error.bind(console, 'connection error:'));
-var databaseUrl = process.env.DATABASEURL || require('./.env')['DATABASEURL']
-var databaseUser = process.env.DATABASEUSER  || require('./.env')['DATABASEUSER']
-var databasePassword = process.env.DATABASEPASSWORD  || require('./.env')['DATABASEPASSWORD']
+var databaseUrl = process.env.DATABASEURL || require('./env.json')['DATABASEURL']
+var databaseUser = process.env.DATABASEUSER  || require('./env.json')['DATABASEUSER']
+var databasePassword = process.env.DATABASEPASSWORD  || require('./env.json')['DATABASEPASSWORD']
 mongoose.connect('mongodb://'+databaseUser+':'+databasePassword+'@'+databaseUrl);
 
 app.use(bodyParser.urlencoded({ extended: true }));
