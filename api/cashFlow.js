@@ -1,4 +1,4 @@
-var CashFlow = require('../app/models/cashflow');
+var CashFlow = require('../app/models/cashFlow');
 
 exports.create = function (req, res) {
     var cashFlow = new CashFlow();
