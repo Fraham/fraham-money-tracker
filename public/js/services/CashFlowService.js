@@ -7,7 +7,6 @@ angular.module('CashFlowService', [])
             },
             create: function (description, category, amount, purchaseDate) {
                 var data = {
-
                     "description": description ? description : "",
                     "category": category ? category : "",
                     "amount": amount ? amount : 0,

@@ -1,5 +1,5 @@
 angular.module('MainCtrl', [])
-    .controller('MainController', ['$scope', 'CashFlowService', function ($scope, CashFlowService) {
+    .controller('MainController', ['$scope', 'CashFlowService', 'socket', function ($scope, CashFlowService, socket) {
 
         var onSuccessGetAll = function (res) {
             $scope.cashFlows = res.data.cashFlow;
@@ -12,4 +12,11 @@ angular.module('MainCtrl', [])
 
         CashFlowService.getAll()
             .then(onSuccessGetAll, onErrorGetAll);
+
+        socket.on('cashFlow create', function (cashFlow) {
+            console.log(cashFlow);
+            $scope.cashFlows.push(cashFlow);
+            console.log($scope.cashFlows);
+            $scope.$apply()
+        });
     }]);

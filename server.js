@@ -1,5 +1,3 @@
-//require('dotenv').config()
-
 var express = require('express');       
 var app = express();                
 
@@ -10,6 +8,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var db = mongoose.connection;
 var path = require('path');
+
 mongoose.Promise = global.Promise;
 db.on('error', console.error.bind(console, 'connection error:'));
 var databaseUrl = process.env.DATABASEURL || require('./env.json')['DATABASEURL']
@@ -19,6 +18,12 @@ mongoose.connect('mongodb://'+databaseUser+':'+databasePassword+'@'+databaseUrl)
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+
+io.on('connection', function(socket) {
+  console.log('new connection');
+});
+
+exports.io = io
 
 
 // --------------- API -------------------
@@ -41,6 +46,6 @@ app.get('/', function(req, res) {
     res.sendfile('./public/index.html');
 });
 
-app.listen(port);
+http.listen(port);
 console.log('Magic happens on port ' + port);
 
