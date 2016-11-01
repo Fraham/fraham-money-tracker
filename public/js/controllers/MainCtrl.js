@@ -14,9 +14,7 @@ angular.module('MainCtrl', [])
             .then(onSuccessGetAll, onErrorGetAll);
 
         socket.on('cashFlow create', function (cashFlow) {
-            console.log(cashFlow);
             $scope.cashFlows.push(cashFlow);
-            console.log($scope.cashFlows);
             $scope.$apply()
         });
     }]);
