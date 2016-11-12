@@ -13,8 +13,8 @@
 				<tr ng-repeat="flow in cashFlows">
 					<td>{{flow.description}}</td>
 					<td>{{flow.category}}</td>
-					<td ng-class="{greenText:flow.amount > 0, redText:flow.amount<=0}">£{{flow.amount}}</td>
-					<td>{{flow.purchaseDate}}</td>
+					<td ng-class="{greenText:flow.amount > 0, redText:flow.amount<=0}">{{flow.amount  | currency:"£"}}</td>
+					<td>{{flow.purchaseDate | date:'dd/MM/yyyy'}}</td>
 				</tr>
 			</tbody>
 		</table>

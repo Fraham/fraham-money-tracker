@@ -6,4 +6,8 @@ angular.module('appRoutes', [])
                 templateUrl: 'views/main.html',
                 controller: 'MainController'
             })
+            .when('/CreateTransaction', {
+                templateUrl: 'views/createTranscation.html',
+                controller: 'CreateTransactionController'
+            })
     }]);

@@ -1,4 +1,4 @@
-var app = angular.module('moneyTrackerApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'CashFlowService'])
+var app = angular.module('moneyTrackerApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'CashFlowService', 'CreateTranscationCtrl'])
 
 app.factory('socket', ['$rootScope', function($rootScope) {
   var socket = io.connect();
